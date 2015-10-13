@@ -7,6 +7,7 @@
 	<table border ="1">
 		<p>Do not leave blank. Insert a dash "-" if not applicable.</p>
 		<tr>
+			<td>Owner</td>
 			<td>Address</td>
 			<td>Rate</td>
 			<td>Comment</td>
@@ -19,6 +20,7 @@
 		</tr>
 		<% @properties.each do |property| %>
 		<tr>
+			<td><a href="/properties/<%= property.id %>"><%= property.user.username %></a></td>
 			<td><a href="/properties/<%= property.id %>"><%= property.address%></a></td>
 			<td><a href="/properties/<%= property.id %>"><%= property.rate%></a></td>
 			<td><a href="/properties/<%= property.id %>"><%= property.comment%></a></td>

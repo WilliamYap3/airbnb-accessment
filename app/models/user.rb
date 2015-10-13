@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 	validates :username, :presence => true, :uniqueness => true
   validates :password, :presence => true
   validates_length_of :password, :in => 6..20, :on => :create
-
+  has_many :properties
   def self.authenticate(username, password)
     user = User.find_by_username(username)
       if user.nil?
