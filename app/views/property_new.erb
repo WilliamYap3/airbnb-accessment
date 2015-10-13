@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <h1 align="center">Property New</h1>
+  <p>Do not leave blank. Insert a dash "-" if not applicable.</p>
+  <form action="/properties/new" method="POST">
+    <label>Address: </label><input type="text" name="property[address]" /><br><p></p>
+    <label>Rate: </label><input type="integer" name="property[rate]" /><br><p></p>
+    <label>Comment: </label><input type="text" name="property[comment]" /><br><p></p>
+    <label>Start Date: </label><input type="text" name="property[start_date]" /><br><p></p>
+    <label>End Date: </label><input type="text" name="property[end_date]" /><br><p></p>
+    <label>Booked By: </label><input type="text" name="property[booked_by]" /><br><p></p>
+    <input type="submit" name="submit" value="Save New" />
+	</form>
+	<p><a href="/properties">Home</p>
+</body>
+</html>

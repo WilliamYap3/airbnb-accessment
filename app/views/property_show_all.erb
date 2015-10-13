@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<h1 align="center">Properties View All</h1>
+	<form action="/properties/new" method="GET"><input type="submit" value="Create New Property"></form><p></p>
+	<table border ="1">
+		<p>Do not leave blank. Insert a dash "-" if not applicable.</p>
+		<tr>
+			<td>Address</td>
+			<td>Rate</td>
+			<td>Comment</td>
+			<td>Start Date</td>
+			<td>End Date</td>
+			<td>Booked By</td>
+			<td>Edit</td>
+			<td>Delete</td>
+			<td></td>
+		</tr>
+		<% @properties.each do |property| %>
+		<tr>
+			<td><a href="/properties/<%= property.id %>"><%= property.address%></a></td>
+			<td><a href="/properties/<%= property.id %>"><%= property.rate%></a></td>
+			<td><a href="/properties/<%= property.id %>"><%= property.comment%></a></td>
+			<td><a href="/properties/<%= property.id %>"><%= property.start_date%></a></td>
+			<td><a href="/properties/<%= property.id %>"><%= property.end_date%></a></td>
+			<td><a href="/properties/<%= property.id %>"><%= property.booked_by%></a></td>
+			<td><form action="/properties/<%= property.id %>/edit" method="GET"><input type="submit" value="Edit"></form></td>
+			<td><form action="/properties/<%= property.id %>/delete" method="POST">
+    	<input type="submit" value="Delete"></form></td>	
+		</tr>
+		<%end%>	
+	</table>
+	<p><a href="/properties">Home</p>
+	<p><a href="/">Logout</p>
+</body>
+</html>

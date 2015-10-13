@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<h1 align="center">Property View</h1>
+	<label>Address: </label><%= @property.address%><br><p></p>
+	<label>Rate: </label><%= @property.rate %><br><p></p>
+	<label>Comment: </label><%= @property.comment %><br><p></p>
+	<label>Start Date: </label><%= @property.start_date %><br><p></p>
+	<label>End Date: </label><%= @property.end_date %><br><p></p>
+	<label>Booked By: </label><%= @property.booked_by %><br><p></p>
+	<form action="/properties/<%= @property.id %>/edit" method="GET"><input type="submit" value="Edit"></form><br><p></p>
+	<form action="/properties/<%= @property.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+	<p><a href="/properties">Home</p>
+</body>
+</html>

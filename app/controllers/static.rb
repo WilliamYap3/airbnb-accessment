@@ -1,3 +1,3 @@
 get '/' do
-  erb :"static/index"
+  erb :index
 end
